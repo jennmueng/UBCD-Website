@@ -1,0 +1,88 @@
+h3 {
+    opacity: .8;
+    font-weight: 500;
+    font-size: 26px;
+    padding: none;
+}
+h1 {
+    font-size: 46px;
+    font-family: 'Varela', 'Kanit', sans-serif;
+}
+.Home {
+    width: 100%;
+}
+.hero {
+    width: 100%;
+    height: calc(100vh - 65px);
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+.heroText {
+    position: relative;
+    font-family: "Varela", "Prompt", sans-serif;
+    font-weight: 300;
+    padding: 50px;
+    height: calc(100vh - 65px);
+    color: white;
+    background-color: rgba(14, 0, 117, 0.4);
+}
+.heroButton {
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: none;
+    text-decoration: none;
+    color: white;
+    background-color: #FF649D;
+    font-family: 'Varela', 'Kanit', sans-serif;
+    font-size: 20px;
+    -webkit-box-shadow: 0px 5px 18px 2px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 5px 18px 2px rgba(0,0,0,0.05);
+    box-shadow: 0px 5px 18px 2px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: all .15s ease-out;
+    outline: none;
+    font-weight: 700;
+}
+.heroButton:hover {
+    background-color: rgb(255, 159, 194);
+    -webkit-box-shadow: 0px 5px 18px 2px rgba(0,0,0,0);
+    -moz-box-shadow: 0px 5px 18px 2px rgba(0,0,0,0);
+    box-shadow: 0px 5px 18px 2px rgba(0,0,0,0);
+    transform: scale(.95);
+}
+.heroImage {
+    min-width: 100%;
+    width: 80vw;
+    height: auto;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+@media (max-width: 1000px) {
+    .heroImage {
+        height: 100%;
+        width: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (min-height: 670px) {
+    .heroImage {
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 32px;
+    }
+    .heroText {
+        padding: 20px;
+    }
+}

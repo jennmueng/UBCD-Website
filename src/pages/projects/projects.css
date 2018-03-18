@@ -1,0 +1,57 @@
+.projects {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 100px;
+    margin-bottom: 50px;
+}
+.project {
+    position: relative;
+    height: 220px;
+    background-color: #c3c3c3;
+    width: 100%;
+    transition: all .10s ease-out;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    cursor: pointer;
+}
+.project:hover {
+    width: calc(100% + 140px);
+    -webkit-box-shadow: 0px 5px 30px 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 5px 30px 5px rgba(0,0,0,0.2);
+    box-shadow: 0px 5px 30px 5px rgba(0,0,0,0.2);
+}
+.projectOverlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(14, 0, 117, 0);
+    opacity: 0;
+    z-index: 6;
+    transition: all .2s ease-out;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.project:hover .projectOverlay {
+    background-color: rgba(14, 0, 117, 0.4);
+    opacity: 1;
+}
+.projectBg {
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+    transition: all .2s ease-out;
+}
+.projectInfo {
+    color: white;
+}
+.project:hover .projectBg {
+    filter: blur(5px);
+}

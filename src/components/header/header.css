@@ -1,0 +1,145 @@
+.Header {
+    font-family: 'Varela', 'Kanit', sans-serif;
+    height: 65px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 100px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    -webkit-box-shadow: 0px 5px 18px 2px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 5px 18px 2px rgba(0,0,0,0.05);
+    box-shadow: 0px 5px 18px 2px rgba(0,0,0,0.05);
+}
+
+.headerLogo {
+    width: 150px;
+    transition: all .15s;
+}
+.headerLogo:hover {
+    opacity: .5;
+}
+
+.headerLinkArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    flex-direction: row;
+    
+}
+
+.langChanger {
+    cursor: default;
+    margin-left: 15px;
+}
+
+.lang {
+    cursor: pointer;
+    margin: 5px;
+    font-size: 13px;
+    transition: all .15s;
+    
+}
+
+.lang:hover {
+    color: #FF649D;
+}
+
+.selectedLang {
+    color: #FF649D !important;
+}
+
+.headerLink {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #0D0074;
+    transition: all .15s;
+    font-weight: 500;
+}
+
+.headerLink:hover {
+    color: #FF649D;
+}
+.burgerLink {
+    display: none;
+}
+@media (max-width: 1080px) {
+    .Header {
+        padding: 10px 50px;
+    }
+}
+@media (max-width: 670px) {
+    .Header {
+        padding: 10px;
+    }
+    
+
+    .headerLinkArea {
+        height: 100vh;
+        width: 100vw;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 10px;
+        font-size: 7vw;
+
+    }
+    .burger {
+        display: none;
+        position: fixed;
+        left: 0%;
+        top: 0%;
+        z-index: -1;
+        transition: all .2s;
+    }
+    .open {
+        display: block;
+        animation-name: show;
+        animation-duration: .15s;
+        animation-timing-function: ease-in;
+    }
+    .close {
+        display: block;
+        animation-name: hide;
+        animation-duration: .15s;
+        animation-timing-function: ease-in;
+    }
+    .burgerLink {
+        display: block;
+        position: absolute;
+        right: 25px;
+    }
+    .headerLink {
+        margin: 10px;
+    }
+    .langChanger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+        font-size: 28px;
+    }
+    .lang {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+}
+@keyframes show {
+    0% {opacity:0; transform: scale(.6)}
+    80% {opacity: 1}
+    100% {opacity: 1; transform: scale(1)}
+}
+@keyframes hide {
+    0% {opacity:0; transform: scale(.6)}
+    80% {opacity: 1}
+    100% {opacity: 1; transform: scale(1)}
+}

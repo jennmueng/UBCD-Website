@@ -1,0 +1,8 @@
+.footer {
+    position: fixed;
+    bottom: 4px;
+    text-align: center;
+    z-index: 10;
+    opacity: .3;
+    font-size: 14px;
+}

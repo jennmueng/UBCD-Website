@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 0 100px;
+    padding: 0 50px;
     margin-bottom: 50px;
 }
 .project {
@@ -21,6 +21,11 @@
     justify-content: center;
     z-index: 4;
     cursor: pointer;
+    will-change: box-shadow, width;
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
 }
 .project:hover {
     width: calc(100% + 140px);
@@ -38,6 +43,7 @@
     transition: all .2s ease-out;
     padding: 20px;
     box-sizing: border-box;
+    will-change: background-color, opacity;
 }
 .project:hover .projectOverlay {
     background-color: rgba(14, 0, 117, 0.4);
@@ -48,10 +54,44 @@
     box-sizing: border-box;
     z-index: 1;
     transition: all .2s ease-out;
+    will-change: filter;
 }
 .projectInfo {
     color: white;
 }
 .project:hover .projectBg {
     filter: blur(5px);
+}
+
+@media (max-width: 1080px) {
+    .project:hover {
+        width: 100vw;
+    }
+}
+@media (max-width: 800px) {
+    .projects {
+        padding: 0 20px;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-backface-visibility:  hidden;
+        backface-visibility:  hidden;
+    }
+    h1 {
+        padding: 0;
+        margin: 0;
+    }
+    .project {
+        height: 140px;
+        outline: none; 
+        -webkit-tap-highlight-color: transparent;
+        -webkit-backface-visibility:  hidden;
+        backface-visibility:  hidden;
+    }
+    .projectBg {
+        width: auto;
+        height: 100%;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-backface-visibility:  hidden;
+        backface-visibility:  hidden;
+    }
+    
 }

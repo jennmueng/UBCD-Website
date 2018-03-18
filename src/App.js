@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router';
 import { HeaderEn, HeaderTh } from './components/header/header';
 import { ProjectsEn, ProjectsTh } from './pages/projects/projects';
 import { HomeEn, HomeTh } from './pages/home/home';
+import { IndivEn, IndivTh } from './pages/projects/indivProjects';
 import Footer from './components/footer/footer';
 import './App.css';
 
@@ -36,7 +37,8 @@ class App extends Component {
             <div className={this.state.contentClasses}>
             <Switch>
               <Route exact path='/' component={this.state.lang === 'EN' ? HomeEn : HomeTh}/>
-              <Route path='/projects' component={this.state.lang === 'EN' ? ProjectsEn : ProjectsTh}/>
+              <Route exact path='/projects' component={this.state.lang === 'EN' ? ProjectsEn : ProjectsTh}/>
+              <Route path='/projects' component={this.state.lang === 'EN' ? IndivEn : IndivTh}/>
             </Switch>
             </div>
             <Footer />
